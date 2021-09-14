@@ -1,0 +1,200 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  width:100%;
+  min-height:100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: ghostwhite;
+}
+.main_div{
+  width:100%;
+  min-height:100vh;
+  padding:0px 20px;
+}
+/* header */
+.header_div{
+  width: 100%;
+  height:70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+/* mainSection */
+.mainSection_div{
+  width:100%;
+  height:auto;
+}
+.addList_div{
+  width:100%;
+  height:100px;
+  display: flex;
+  justify-content:flex-end;
+  align-items:center;
+}
+.addList_div button,.submit_div button,.addTask_div button{
+  padding: 5px 15px;
+  background-color:ghostwhite;
+  border: 1px solid black;
+  border-radius:10px;
+  cursor: pointer;
+   font-weight: bold;
+}
+/* modal */
+.modalBg_div{
+  position: absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100vh;
+  background-color: black;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  visibility: hidden;
+  z-index: 1;
+}
+.modalBg_div.visible{
+ visibility: visible;
+}
+.modal{
+  padding: 10px;
+  width:350px;
+  min-height:100px;
+  background-color: white;
+  z-index: 2;
+}
+ .close_div{
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.close_div p{
+  cursor: pointer;
+}
+.input_div{
+  width:100%;
+  height: 30px;
+  margin-top: 10px;
+}
+.input_div input{
+  width:100%;
+  height:30px;
+  text-align: center;
+  font-size: 18px;
+}
+.textarea_div{
+  width:100%;
+  min-height: 50px;
+  max-height: auto;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.textarea_div textarea{
+  width:100%;
+  min-height: 50px;
+  max-height: auto;
+  text-align: center;
+  font-size: 18px;
+}
+.submit_div{
+  margin-top: 10px;
+  width:100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* list section */
+.listSection_div{
+  width:100%;
+  height:auto;
+  display: grid;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  justify-items:center;
+  justify-content:space-around;
+  grid-gap:50px;
+  margin: 5px 20px;
+}
+.list_div{
+  width: 250px;
+  min-height:100px;
+  max-height:auto;
+  height:fit-content;
+  border:1px solid black;
+
+}
+.list_header{
+width:100%;
+height:50px;
+display: grid;
+grid-template-columns: 2fr 1fr;
+align-items: center;
+justify-items: center;
+border-bottom: 1px solid black;
+}
+.task_container{
+  width:100%;
+  min-height:10px;
+  max-height: 400px;
+  height:fit-content;
+  padding: 10px;
+  overflow-y:auto;
+  overflow-x: hidden;
+}
+
+/* to remove scrollbar */
+.task_container,.input_div textarea{
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  overflow-y: scroll; 
+}
+
+.task_container::-webkit-scrollbar,.input_div textarea::-webkit-scrollbar{
+  display: none; 
+}
+
+.addTask_div{
+  width:100%;
+  height:50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* task div */
+.task_div{
+  width:100%;
+  min-height:70px;
+  max-height: auto;
+  padding: 5px;
+  border:1px solid black;
+  word-break: break-all;
+  margin:5px 0px;
+}
+.task_header{
+  width:100%;
+  height:20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+.task_desc{
+  margin-top: 5px;
+  width:100%;
+  min-height:20px;
+  max-height: auto;
+  text-align: center;
+}
+.taskTime_div{
+  margin-top: 5px;
+  width:100%;
+  height: 20px;
+  display: grid;
+  justify-items: end;
+}
